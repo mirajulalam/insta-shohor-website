@@ -12,7 +12,7 @@ const getReportedPosts = () => {
 };
 
 const isLiked = (id) => {
-  return likedPostsId?.length && !!likedPostsId.includes(id);
+  return likedPostsId.length && !!likedPostsId.includes(id);
 };
 
 const addToLiked = (id) => {
@@ -22,7 +22,7 @@ const addToLiked = (id) => {
 
 const reportPost = (id) => {
   reportedPostsId.push(id);
-  const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+  const remainingPosts = posts?.filter((post) => !reportedPostsId.includes(post.id));
   showPosts(remainingPosts);
 };
 
@@ -85,7 +85,7 @@ const createPost = (post) => {
 
               <div class="post__footer">
                 <div class="post__buttons">
-                  <button class="post__button" onclick="addToLiked('${post.id}')">
+                  <button class="post__button" onclick="addToLiked(${post.id})">
                   <i class="fa-solid fa-heart ${isLiked(post.id) && "text-danger"}"></i>
                     
                   </button>
@@ -152,7 +152,7 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-  posts.forEach((post) => {
+  reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
   });
