@@ -92,6 +92,21 @@
                 there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats
                 the same process.The above diagram demonstrates the basic workflow between the Event Loop and the Task
                 Queue.</p>
+            <h2>Question No3 : Local storage and Session storage Difference?</h2>
+            <h5>LocalStorage :</h5>
+            <p>Local storage stores data with no expiration date. localStorage remain till the browser cache is
+                cleared.Shared between all tabs and windows from the same origin.The data does not expire. It remains
+                after the browser restart and even OS reboot. The
+                localStorage is shared between all windows with the same origin, so if we set the data in one window,
+                the change becomes visible in another one.</p>
+            <h5>sessionStorage :</h5>
+            <p>Session storage is destroyed once the user closes the browser whereas.sessionStorage is lost the moment
+                the browser is closed.The sessionStorage object is used
+                much less often than localStorage.The sessionStorage exists only within the current browser tab.Another
+                tab with the same page will have a different storage.But it is shared between iframes in the same tab
+                (assuming they come from the same origin).The data survives page refresh, but not closing/opening the
+                tab. That’s exactly because sessionStorage is bound not only to the origin, but also to the browser tab.
+                For that reason, sessionStorage is used sparingly.</p>
         </div>
     </section>
     <footer></footer>
