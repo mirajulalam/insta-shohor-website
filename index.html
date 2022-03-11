@@ -57,6 +57,7 @@
             <h1>Reported posts</h1>
         </div>
     </main>
+    <!-- javascript question section -->
     <section>
         <h1 class="section-title">Javascript Question</h1>
         <div>
@@ -76,6 +77,21 @@
                 place some JavaScript code See How Web Pages Work for details on Web pages. When the browser loads the
                 page, the browser has a built-in interpreter that reads the JavaScript code it finds in the page and
                 runs it. </p>
+            <h2>Question No2 :What does javascript even loop do?</h2>
+            <p>A single-treaded non-blocking asynchronous concurrent language.I have a call stack,an event loop,a
+                callback queue some other apis and stuff Hey v8.In computer science, the event loop is a programming
+                construct or design pattern that waits for and dispatches events or messages in a program.Since V8 has
+                just one call stack, how then does JavaScript run concurrently and asynchronously without blocking the
+                main execution thread.JavaScript runs each code line by line, one after each other(single-threaded). As
+                expected, the first line gets printed in the console here, but why is the last line printed before the
+                timeout code? Why doesn't the execution process wait for the timeout code(blocking) before going ahead
+                to run the last line.Some other thread seems to have helped us execute that timeout since we are pretty
+                sure a thread can only execute one single task at any point in time.The event loop is a process that
+                waits for the Call Stack to be clear before pushing callbacks from the Task Queue to the Call Stack.
+                Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If
+                there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats
+                the same process.The above diagram demonstrates the basic workflow between the Event Loop and the Task
+                Queue.</p>
         </div>
     </section>
     <footer></footer>
